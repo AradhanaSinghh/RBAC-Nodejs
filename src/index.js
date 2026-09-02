@@ -13,11 +13,11 @@ dbConnect();
 const PORT=process.env.PORT || 7002;
 
 const authRoutes=require("./routes/authRoutes.js")
+const userRoutes=require("./routes/userRoutes.js");
 
 app.use("/api/auth",authRoutes);
-
+app.use("/api/users",userRoutes);
 
 app.listen(PORT,()=>{
     console.log(`Server is running at port ${PORT}`);
 })
-
